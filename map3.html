@@ -19,7 +19,7 @@ attribution: ' &copy; ' + attr,maxZoom: 18}).addTo(map);
 
 var icon = L.icon({iconUrl:'https://cdn.rawgit.com/mayotunde/demo/master/cattle.png', iconSize:[30,30]});
 
-$.getJSON("schools.geojson", function(data){
+$.getJSON("https://cdn.rawgit.com/mayotunde/demo/master/spot.geojson", function(data){
 var poly = L.geoJson(data, {
 pointToLayer: function(feature, latlng){
 marker = L.marker(latlng, {icon: icon})
