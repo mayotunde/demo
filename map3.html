@@ -23,7 +23,7 @@ $.getJSON("https://cdn.rawgit.com/mayotunde/demo/master/spot.geojson", function(
 var poly = L.geoJson(data, {
 pointToLayer: function(feature, latlng){
 marker = L.marker(latlng, {icon: icon})
-marker.bindPopup(feature.properties.settlement)
+marker.bindPopup(feature.properties.Settlement)
 return marker
 }}).addTo(map);
 });
