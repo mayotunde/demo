@@ -19,13 +19,13 @@ attribution: ' &copy; ' + attr,maxZoom: 18}).addTo(map);
 var style = {fillColor:'#ae7', color:'black', fillOpacity:0.4, weight:2};
 
 
-$.getJSON("merge.geojson", function(data){
+$.getJSON("https://cdn.rawgit.com/mayotunde/demo/master/district.geojson", function(data){
 var areas = L.geoJson(data, style).addTo(map);
 });
 
-var icon = L.icon({iconUrl:'cattle.png', iconSize:[30,30]});
+var icon = L.icon({iconUrl:'https://cdn.rawgit.com/mayotunde/demo/master/cattle.png', iconSize:[30,30]});
 
-$.getJSON("schools.geojson", function(data){
+$.getJSON("https://cdn.rawgit.com/mayotunde/demo/master/spot.geojson", function(data){
 var poly = L.geoJson(data, {
 pointToLayer: function(feature, latlng){
 marker = L.marker(latlng, {icon: icon})
